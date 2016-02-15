@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    public class Class1
+    static class Utilities
     {
+        static decimal ConvertToOunces()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
