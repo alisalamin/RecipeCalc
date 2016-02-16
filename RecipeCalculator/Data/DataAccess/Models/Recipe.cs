@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace DataAccess.Models
 {
-    public interface IRecipe : IEntity<int>
+    public interface IRecipe : IEntity<long>
     {
         string RecipeName { get; set; }
     }
@@ -16,8 +16,9 @@ namespace DataAccess.Models
     public class Recipe : IRecipe
     {
         [Key, Required]
-        public int Id { get; set; }
+        public long Id { get; set; }
         [Required]
         public string RecipeName { get; set; }
+        public ICollection<Ingredient> Students { get; set; }
     }
 }

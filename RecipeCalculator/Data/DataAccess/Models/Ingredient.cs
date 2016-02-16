@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace DataAccess.Models
@@ -14,11 +15,14 @@ namespace DataAccess.Models
         None = 0,
         Ounce = 1,
         Slice = 2,
-        Teaspoon = 3
+        Teaspoon = 3,
+        Clove = 4,
+        Cup = 5
     }
 
-    public interface IIngredient : IEntity<int>
+    public interface IIngredient : IEntity<long>
     {
+        long RecipeID { get; set; }
         decimal AmountOf { get; set; }
         UnitTypes UnitType { get; set; }
         IProduct Product { get; set; }
@@ -27,12 +31,17 @@ namespace DataAccess.Models
     public class Ingredient : IIngredient
     {
         [Key, Required]
-        public int Id { get; set; }
+        public long Id { get; set; }
+        
         [Required]
         public decimal AmountOf { get; set; }
         [Required]
         public UnitTypes UnitType { get; set; }
         [Required]
         public IProduct Product { get; set; }
+
+        [ForeignKey("Recipe")]
+        public long RecipeID { get; set; }
+        public Recipe Recipe { get; set; } 
     }
 }

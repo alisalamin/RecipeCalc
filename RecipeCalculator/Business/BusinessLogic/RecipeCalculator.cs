@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using BusinessLogic.Models;
 using DataAccess;
 using DataAccess.Models;
-using DataAccess.Repositories;
 
 namespace BusinessLogic
 {
@@ -15,7 +14,7 @@ namespace BusinessLogic
         public decimal ApplySalesTax(IRecipe recipe)
         {
 
-            var x = new IngredientRepo();
+           // var x = new IngredientRepo();
             
 
             throw new NotImplementedException();

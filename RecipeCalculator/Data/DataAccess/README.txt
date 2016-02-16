@@ -16,7 +16,7 @@
 
   - press enter - 
 
- 4. Type or paste: Add-Migration IinitialCreate
+ 4. Type or paste: Add-Migration InitialCreate
 
   - press enter - 
 

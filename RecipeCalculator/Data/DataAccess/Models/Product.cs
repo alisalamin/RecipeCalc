@@ -16,11 +16,11 @@ namespace DataAccess.Models
         Pantry = 3
     }
 
-    public interface IProduct : IEntity<int>
+    public interface IProduct : IEntity<long>
     {
         string ProductName { get; set; }
         ProductTypes ProductType { get; set; }
-        decimal PricePerOunce { get; set; }
+        UnitTypes UnitType { get; set; }
         decimal Price { get; set; }
         bool IsOrganic { get; set; }
     }
@@ -28,13 +28,16 @@ namespace DataAccess.Models
     public class Product : IProduct
     {
         [Key, Required]
-        public int Id { get; set; }
+        public long Id { get; set; }
         [StringLength(200), Required]
         public string ProductName { get; set; }
         [Required]
         public ProductTypes ProductType { get; set; }
-        public decimal PricePerOunce { get; set; }
+        [Required]
+        public UnitTypes UnitType { get; set; }
+        [Required]
         public decimal Price { get; set; }
+        [Required]
         public bool IsOrganic { get; set; }
     }
 }
