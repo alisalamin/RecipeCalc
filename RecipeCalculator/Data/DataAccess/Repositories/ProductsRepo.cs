@@ -7,7 +7,7 @@ using DataAccess.Models;
 
 namespace DataAccess.Repositories
 {
-    class ProductsRepo : IRepository<IProduct, int>
+    public class ProductsRepo : IRepository<IProduct>
     {
         public IEnumerable<IProduct> List
         {
@@ -19,7 +19,7 @@ namespace DataAccess.Repositories
             throw new NotImplementedException();
         }
 
-        public void Save(IProduct entity)
+        public void Insert(IProduct entity)
         {
             throw new NotImplementedException();
         }
@@ -30,6 +30,24 @@ namespace DataAccess.Repositories
         }
 
         public void Delete(IProduct entity)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void CommitChanges(IProduct entity)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        IEnumerable<IProduct> IRepository<IProduct>.List()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        IEnumerable<IProduct> IRepository<IProduct>.List(System.Linq.Expressions.Expression<Func<IProduct, bool>> predicate)
         {
             throw new NotImplementedException();
         }

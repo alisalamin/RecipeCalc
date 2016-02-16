@@ -9,7 +9,7 @@ using DataAccess.Models;
 
 namespace DataAccess
 {
-    class UnitOfWork : DbContext
+    internal class UnitOfWork : DbContext
     {
         public UnitOfWork()
             : base("name=RecipeMakerDB")

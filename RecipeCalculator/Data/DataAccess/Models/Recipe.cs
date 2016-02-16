@@ -8,19 +8,16 @@ using System.Data.Entity;
 
 namespace DataAccess.Models
 {
-    public interface IRateAdjustment : IEntity<int>
+    public interface IRecipe : IEntity<int>
     {
-        decimal SalesTax { get; set; }
-        decimal WellnessDiscountRate { get; set; }
+        string RecipeName { get; set; }
     }
 
-    public class RateAdjustment : IRateAdjustment
+    public class Recipe : IRecipe
     {
         [Key, Required]
         public int Id { get; set; }
-
-        public decimal SalesTax { get; set; }
-
-        public decimal WellnessDiscountRate { get; set; }
+        [Required]
+        public string RecipeName { get; set; }
     }
 }

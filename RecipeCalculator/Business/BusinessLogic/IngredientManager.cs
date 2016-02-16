@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace DataAccess
+namespace BusinessLogic
 {
-    public interface IEntity<T>
+    class IngredientManager
     {
-        T Id { get; set; }
+        //Add Ingredient
+
+        //Remove Ingredient
+
+        //Update Ingredient
+
     }
 }

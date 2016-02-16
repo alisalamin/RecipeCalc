@@ -27,7 +27,6 @@ namespace DataAccess.Models
     public class Ingredient : IIngredient
     {
         [Key, Required]
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
         public decimal AmountOf { get; set; }
