@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public interface IRepository<TEntity> where TEntity : IEntity<int>
+    public interface IRepository<TEntity, TKey> where TEntity : IEntity<TKey>
     {
-        TEntity GetById(int id);
+        TEntity GetById(TKey id);
         IEnumerable<TEntity> List();
         IEnumerable<TEntity> List(System.Linq.Expressions.Expression<Func<TEntity, bool>> predicate);
         void Insert(TEntity entity);

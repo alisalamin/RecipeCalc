@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
+using Common;
 
 namespace DataAccess.Models
 {
@@ -20,7 +22,7 @@ namespace DataAccess.Models
     {
         string ProductName { get; set; }
         ProductTypes ProductType { get; set; }
-        UnitTypes UnitType { get; set; }
+        Enums.UnitTypes UnitType { get; set; }
         decimal Price { get; set; }
         bool IsOrganic { get; set; }
     }
@@ -34,7 +36,7 @@ namespace DataAccess.Models
         [Required]
         public ProductTypes ProductType { get; set; }
         [Required]
-        public UnitTypes UnitType { get; set; }
+        public Enums.UnitTypes UnitType { get; set; }
         [Required]
         public decimal Price { get; set; }
         [Required]

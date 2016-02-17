@@ -5,6 +5,7 @@ namespace DataAccess.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using Models;
+    using Common;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.UnitOfWork>
     {
@@ -20,15 +21,25 @@ namespace DataAccess.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
 
+            var newGuid = Guid.NewGuid();
+
             //Create Basic App Data for Testing
+            context.ApplicationConfigs.AddOrUpdate(
+                ac => ac.Id,
+                new ApplicationConfig
+                {
+                    AppName = "RecipeCalculator"
+                }
+               );
+
             context.RateAdjustments.AddOrUpdate(
                 ra => ra.Id,
-                  new RateAdjustment
-                  {
-                      SalesTax = 0.086m,
-                      WellnessDiscountRate = 0.05m
-                  }
-                );
+                new RateAdjustment
+                {
+                    SalesTax = 8.6m,
+                    WellnessDiscountRate = 5.0m
+                }
+               );
 
             context.Products.AddOrUpdate(
                 p => p.Id,
@@ -38,7 +49,7 @@ namespace DataAccess.Migrations
                     Price = 0.67m,
                     ProductName = "Garlic",
                     ProductType = ProductTypes.Produce,
-                    UnitType = UnitTypes.Clove
+                    UnitType = Enums.UnitTypes.Clove
                 },
                 new Product
                 {
@@ -46,7 +57,7 @@ namespace DataAccess.Migrations
                     Price = 2.03m,
                     ProductName = "Lemon",
                     ProductType = ProductTypes.Produce,
-                    UnitType = UnitTypes.None
+                    UnitType = Enums.UnitTypes.None
                 },
                 new Product
                 {
@@ -54,7 +65,7 @@ namespace DataAccess.Migrations
                     Price = 0.87m,
                     ProductName = "Corn",
                     ProductType = ProductTypes.Produce,
-                    UnitType = UnitTypes.Cup
+                    UnitType = Enums.UnitTypes.Cup
                 },
                 new Product
                 {
@@ -62,7 +73,7 @@ namespace DataAccess.Migrations
                     Price = 2.19m,
                     ProductName = "Chicken Breast",
                     ProductType = ProductTypes.Meat,
-                    UnitType = UnitTypes.None
+                    UnitType = Enums.UnitTypes.None
                 },
                 new Product
                 {
@@ -70,7 +81,7 @@ namespace DataAccess.Migrations
                     Price = 0.24m,
                     ProductName = "Bacon",
                     ProductType = ProductTypes.Meat,
-                    UnitType = UnitTypes.Slice
+                    UnitType = Enums.UnitTypes.Slice
                 },
                 new Product
                 {
@@ -78,7 +89,7 @@ namespace DataAccess.Migrations
                     Price = 0.31m,
                     ProductName = "Pasta",
                     ProductType = ProductTypes.Pantry,
-                    UnitType = UnitTypes.Ounce
+                    UnitType = Enums.UnitTypes.Ounce
                 },
                 new Product
                 {
@@ -86,7 +97,7 @@ namespace DataAccess.Migrations
                     Price = 1.92m,
                     ProductName = "Olive Oil",
                     ProductType = ProductTypes.Pantry,
-                    UnitType = UnitTypes.Cup
+                    UnitType = Enums.UnitTypes.Cup
                 },
                 new Product
                 {
@@ -94,7 +105,7 @@ namespace DataAccess.Migrations
                     Price = 1.26m,
                     ProductName = "Vinegar",
                     ProductType = ProductTypes.Pantry,
-                    UnitType = UnitTypes.Cup
+                    UnitType = Enums.UnitTypes.Cup
                 },
                 new Product
                 {
@@ -102,7 +113,7 @@ namespace DataAccess.Migrations
                     Price = 0.16m,
                     ProductName = "Salt",
                     ProductType = ProductTypes.Pantry,
-                    UnitType = UnitTypes.Teaspoon
+                    UnitType = Enums.UnitTypes.Teaspoon
                 },
                 new Product
                 {
@@ -110,7 +121,7 @@ namespace DataAccess.Migrations
                     Price = 0.17m,
                     ProductName = "Pepper",
                     ProductType = ProductTypes.Pantry,
-                    UnitType = UnitTypes.Teaspoon
+                    UnitType = Enums.UnitTypes.Teaspoon
                 }
                );
 

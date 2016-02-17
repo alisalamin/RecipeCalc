@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace BusinessLogic.Models
 {
-    public class RateAdjustmentBO 
+   public class AppSettingsBO
     {
-        public int Id { get; set; }
+        public Guid AppId { get; set; }
+
+        public string AppName { get; set; }
 
         public decimal SalesTax { get; set; }
 

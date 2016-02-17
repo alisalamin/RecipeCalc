@@ -9,32 +9,26 @@ using DataAccess.Models;
 
 namespace BusinessLogic
 {
-    public class RecipeCalculator
+    public class RecipeCalculator : BaseManager
     {
-        public decimal ApplySalesTax(IRecipe recipe)
+
+       
+
+        public decimal TotalCost(IRecipe recipe)
         {
 
-           // var x = new IngredientRepo();
-            
+            // var x = new IngredientRepo();
+
 
             throw new NotImplementedException();
         }
 
 
-        public RateAdjustmentBO GetRateAdjustments()
+        public AppSettingsBO GetRateAdjustments()
         {
-            var appRateRepo = new Repository<RateAdjustment>();
-            var appRate = appRateRepo.GetById(1);
 
-            //var z = appRateRepo.List().Where(x => x.)
-
-
-            return new RateAdjustmentBO()
-            {
-                Id = appRate.Id,
-                SalesTax = appRate.SalesTax,
-                WellnessDiscountRate = appRate.WellnessDiscountRate
-            };
+            return AppSettings;
+           
         }
 
 
@@ -43,5 +37,16 @@ namespace BusinessLogic
 
         //Calculate Total Cost
 
+
+
+        public decimal ApplySalesTax(IngredientBO ingredient)
+        {
+            throw new NotImplementedException();
+        }
+
+        public decimal BeforeTaxPrice(IngredientBO ingredient)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

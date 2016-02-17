@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
@@ -18,9 +19,11 @@ namespace DataAccess.Models
     {
         [Key, Required]
         public int Id { get; set; }
-
         public decimal SalesTax { get; set; }
-
         public decimal WellnessDiscountRate { get; set; }
+
+        [ForeignKey("ApplicationConfig")]
+        public Guid AppId { get; set; }
+        public ApplicationConfig ApplicationConfig { get; set; }
     }
 }

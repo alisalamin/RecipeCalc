@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    class RecipeManager
+    class RecipeManager : BaseManager
     {
         // Create Recipe
 
