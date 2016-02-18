@@ -15,7 +15,6 @@ namespace BusinessLogic.Tests
     public class RecipeCalculatorTests
     {
         public TestContext TestContext { get; set; }
-
         private const decimal TaxRate = 8.6m;
         private const decimal WelnessDiscountRate = 5.0m;
 
@@ -86,7 +85,6 @@ namespace BusinessLogic.Tests
             var taxPercentageDifference = Math.Round((Math.Round((afterTax - beforeTax), 2) / beforeTax), 3) * 100;
             decimal beforeDiscount = receiptItems.FirstOrDefault(garlic => garlic.ProductId == 1).BeforeTaxTotal;
             decimal afterDiscount = calc.ApplyWellnessDiscount(beforeDiscount);
-            //var discountPercentageDifference = Math.Round((Math.Round((beforeDiscount - afterDiscount), 2) / beforeDiscount), 3) * 100;
             var discountPercentageDifference = ((beforeDiscount - afterDiscount) / beforeDiscount) * 100;
 
             Assert.IsNotNull(receiptItems);
@@ -343,6 +341,5 @@ namespace BusinessLogic.Tests
 
             Trace.WriteLine(output.ToString());
         }
-
     }
 }

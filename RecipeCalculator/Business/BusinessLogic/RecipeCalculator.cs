@@ -21,7 +21,6 @@ namespace BusinessLogic
 
         public decimal ApplyWellnessDiscount(decimal amount)
         {
-           // return (amount - Math.Round(amount * (AppSettings.WellnessDiscountRate / 100), 2));
             return amount - amount * (AppSettings.WellnessDiscountRate / 100);
         }
 
@@ -49,7 +48,7 @@ namespace BusinessLogic
             {
                 var beforeTax = BeforeTaxPrice(ingr);
                 var product = new Repository<Product, long>().GetById(ingr.ProductId);
-                var wellnessDiscountAmount = ((product.IsOrganic) ? Math.Round(beforeTax * (AppSettings.WellnessDiscountRate / 100), 2): 0.00m);
+                var wellnessDiscountAmount = ((product.IsOrganic) ? Math.Round(beforeTax * (AppSettings.WellnessDiscountRate / 100), 2) : 0.00m);
                 var itemTaxAmount = ((product.ProductType != Enums.ProductTypes.Produce) ? (Math.Round(beforeTax * (AppSettings.SalesTax / 100), 2)) : 0.00m);
 
                 receipt.Add(

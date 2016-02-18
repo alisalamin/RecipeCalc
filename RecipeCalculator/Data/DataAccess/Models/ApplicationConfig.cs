@@ -9,7 +9,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
-
     public interface IApplicationConfig : IEntity<Guid>
     {
         string AppName { get; set; }
@@ -17,13 +16,9 @@ namespace DataAccess.Models
 
     public class ApplicationConfig : IApplicationConfig
     {
-        //[Key, Required]
-        //public int Id { get; set; }
         [Key, Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         [Required]
         public string AppName { get; set; }
-
     }
-
 }

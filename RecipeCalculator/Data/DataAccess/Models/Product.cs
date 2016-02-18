@@ -10,7 +10,6 @@ using Common;
 
 namespace DataAccess.Models
 {
-
     public interface IProduct : IEntity<long>
     {
         string ProductName { get; set; }

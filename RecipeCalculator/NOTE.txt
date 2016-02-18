@@ -3,4 +3,6 @@ Hello,
 If you're looking for the client, please note that due to the emphasis on testing the Unit Test project is effectively the client interface for this solution, and the current means by which you run the calculator functions.
 
 
-After you're all set up with the DataAccess layer (see README.txt in the Data folder), you should be able to see all the tests in the Visual Studio Test Explorer. Basically just click "Run All" then have a look at the output for various messages that will broadcast result messages. Note that the output in the case of the Test Explorer pane can be found as demonstrated in this illustration: http://i.stack.imgur.com/XvJxe.png
+After you're all set up with the DataAccess layer (see README.txt in the Data folder), you should be able to see all the tests in the Visual Studio Test Explorer. Basically just click "Run All" then have a look at the output for various messages that will broadcast result messages. In particular keep an eye out for the results of the test named : Totals_Are_Using_Correct_Adjustment_Rates() it will be outputting several text tables containing all the ingredient calculations in the form of a receipt. As seen here: http://content.screencast.com/users/alisalamin/folders/Snagit/media/2be41582-4cda-4591-a2c8-89ddea270b87/02.18.2016-06.01.png
+
+backup link: http://screencast.com/t/DwThaqkYP4Y

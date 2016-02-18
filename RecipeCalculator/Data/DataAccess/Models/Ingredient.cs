@@ -31,6 +31,6 @@ namespace DataAccess.Models
 
         [ForeignKey("Recipe")]
         public long RecipeId { get; set; }
-        public Recipe Recipe { get; set; } 
+        public Recipe Recipe { get; set; }
     }
 }

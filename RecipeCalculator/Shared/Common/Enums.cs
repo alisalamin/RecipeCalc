@@ -25,6 +25,5 @@ namespace Common
             Meat = 2,
             Pantry = 3
         }
-
     }
 }

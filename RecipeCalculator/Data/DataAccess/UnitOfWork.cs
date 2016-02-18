@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using DataAccess.Models;
 
-
 namespace DataAccess
 {
     internal class UnitOfWork : DbContext
@@ -37,6 +36,5 @@ namespace DataAccess
             .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
              */
         }
-
     }
 }
