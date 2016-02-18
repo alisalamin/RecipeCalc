@@ -8,6 +8,11 @@ using System.Data.Entity;
 
 namespace DataAccess
 {
+    /// <summary>
+    /// Generic Repository that performs basic CRUD for all types that implement IEntity.
+    /// </summary>
+    /// <typeparam name="TEntity">IEntity implementation. Ex. Product</typeparam>
+    /// <typeparam name="TKey">Generic unique id type, must match id type of the IEntity type being used. Ex. For Product, the type is long.</typeparam>
     public class Repository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : class, IEntity<TKey>
     {
 

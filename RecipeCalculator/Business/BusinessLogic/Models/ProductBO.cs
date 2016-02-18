@@ -6,12 +6,13 @@ using Common;
 
 namespace BusinessLogic.Models
 {
-    public class IngredientBO 
+    public class ProductBO
     {
         public long Id { get; set; }
-        public long RecipeId { get; set; }
-        public decimal Quantity { get; set; }
+        public string ProductName { get; set; }
+        public Enums.ProductTypes ProductType { get; set; }
         public Enums.UnitTypes UnitType { get; set; }
-        public long ProductId { get; set; }
+        public decimal Price { get; set; }
+        public bool IsOrganic { get; set; }
     }
 }

@@ -12,10 +12,10 @@ namespace DataAccess.Models
 {
     public interface IIngredient : IEntity<long>
     {
-        long RecipeID { get; set; }
+        long RecipeId { get; set; }
         decimal Quantity { get; set; }
         Enums.UnitTypes UnitType { get; set; }
-        long ProductID { get; set; }
+        long ProductId { get; set; }
     }
 
     public class Ingredient : IIngredient
@@ -27,10 +27,10 @@ namespace DataAccess.Models
         [Required]
         public Enums.UnitTypes UnitType { get; set; }
         [Required]
-        public long ProductID { get; set; }
+        public long ProductId { get; set; }
 
         [ForeignKey("Recipe")]
-        public long RecipeID { get; set; }
+        public long RecipeId { get; set; }
         public Recipe Recipe { get; set; } 
     }
 }

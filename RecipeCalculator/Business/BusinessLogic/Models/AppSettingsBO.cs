@@ -10,11 +10,8 @@ namespace BusinessLogic.Models
    public class AppSettingsBO
     {
         public Guid AppId { get; set; }
-
         public string AppName { get; set; }
-
         public decimal SalesTax { get; set; }
-
         public decimal WellnessDiscountRate { get; set; }
     }
 }

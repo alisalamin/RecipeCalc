@@ -1,0 +1,17 @@
+﻿Hi there,
+
+In this business layer you'll notice quite a few of the "Manager" classes have NotImplementedException scaffolding. These classes exist more to fill out the design for the concept of a multi-tiered or at least layered application, capable of providing business logic for the following:
+
+*	Recipe CRUD operations.
+
+*	Ingredient CRUD operations.
+
+*	Product CRUD operations.
+
+as a prelude to of course...
+
+*	Recipe Calculation operations.
+
+I've implemented this layer as such to provide the possibility of utilizing these features from any number of clients, including that of a Unit Test project, which is a client of sorts. 
+
+The features that have been implemented are those that are required for the fulfillment of the specification for the Recipe Calculator.

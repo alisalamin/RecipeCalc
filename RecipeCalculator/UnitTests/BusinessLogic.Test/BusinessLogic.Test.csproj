@@ -67,6 +67,10 @@
       <Project>{38e548ad-04bc-4dbb-ac47-3d98e4be0bb0}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Common\Common.csproj">
+      <Project>{f8d2323a-e720-4ca1-9c03-9a63d692c0c7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

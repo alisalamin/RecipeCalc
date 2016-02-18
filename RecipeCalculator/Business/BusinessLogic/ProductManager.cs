@@ -2,31 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using BusinessLogic.Models;
 using DataAccess;
 using DataAccess.Models;
 
 namespace BusinessLogic
 {
-    public class IngredientManager : BaseManager
+    class ProductManager : BaseManager
     {
-        public void GetIngredient()
+        public ProductBO GetProductById(long id)
         {
             throw new NotImplementedException();
         }
 
-        public void CreateIngredient()
+        public void CreateProduct()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateIngredient()
+        public void UpdateProduct()
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteIngredient()
+        public void DeleteProduct()
         {
             throw new NotImplementedException();
         }

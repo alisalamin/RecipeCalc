@@ -1,0 +1,6 @@
+Hello,
+
+If you're looking for the client, please note that due to the emphasis on testing the Unit Test project is effectively the client interface for this solution, and the current means by which you run the calculator functions.
+
+
+After you're all set up with the DataAccess layer (see README.txt in the Data folder), you should be able to see all the tests in the Visual Studio Test Explorer. Basically just click "Run All" then have a look at the output for various messages that will broadcast result messages. Note that the output in the case of the Test Explorer pane can be found as demonstrated in this illustration: http://i.stack.imgur.com/XvJxe.png

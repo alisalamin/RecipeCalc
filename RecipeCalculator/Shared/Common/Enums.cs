@@ -17,5 +17,14 @@ namespace Common
             Clove = 4,
             Cup = 5
         }
+
+        public enum ProductTypes
+        {
+            None = 0,
+            Produce = 1,
+            Meat = 2,
+            Pantry = 3
+        }
+
     }
 }

@@ -20,6 +20,6 @@ namespace DataAccess.Models
         public long Id { get; set; }
         [Required]
         public string RecipeName { get; set; }
-        public ICollection<Ingredient> Students { get; set; }
+        public ICollection<Ingredient> Ingredients { get; set; }
     }
 }

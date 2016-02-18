@@ -10,18 +10,11 @@ using Common;
 
 namespace DataAccess.Models
 {
-    public enum ProductTypes
-    {
-        None = 0,
-        Produce = 1,
-        Meat = 2,
-        Pantry = 3
-    }
 
     public interface IProduct : IEntity<long>
     {
         string ProductName { get; set; }
-        ProductTypes ProductType { get; set; }
+        Enums.ProductTypes ProductType { get; set; }
         Enums.UnitTypes UnitType { get; set; }
         decimal Price { get; set; }
         bool IsOrganic { get; set; }
@@ -34,7 +27,7 @@ namespace DataAccess.Models
         [StringLength(200), Required]
         public string ProductName { get; set; }
         [Required]
-        public ProductTypes ProductType { get; set; }
+        public Enums.ProductTypes ProductType { get; set; }
         [Required]
         public Enums.UnitTypes UnitType { get; set; }
         [Required]
