@@ -1,0 +1,7 @@
+﻿Hello,
+
+To view the RecipeCalculator totals output, be sure to run the unit tests with the debugging option. You can do this by opening the RecipeCalculatorTests unit test file > clicking anywhere on the screen > then press and hold Ctrl then press R + A, so Ctrl + R, Ctrl + A .
+
+After the tests run, you'll see the output in the debug log, you'll find the Recipe totals table output here. In particular keep an eye out for the results of the test named : Totals_Are_Using_Correct_Adjustment_Rates() it will be outputting several text tables containing all the ingredient calculations in the form of a receipt. As seen here: http://content.screencast.com/users/alisalamin/folders/Snagit/media/2be41582-4cda-4591-a2c8-89ddea270b87/02.18.2016-06.01.png
+
+backup link: http://screencast.com/t/DwThaqkYP4Y
