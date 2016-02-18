@@ -16,14 +16,16 @@
 
  Afterwards please follow these steps..
 
- 1. Delete the migration scripts (ex title: 201602162242183_CreateDBWithTestData.cs") from the Migrations folder within the DataAccess project *if they're present*, it's auto generated so don't worry.
- 
- 2. Open the "Package Manager Console" within visual studio. (Tools > NuGet Package Manager > Package Manager Console).
+ 1. Set BusinessLogic.Test as the startup project by right-clicking the project file in the Solution Explorer pane and selecting "Set as StartUp Project".
 
- 3. Type or paste: Add-Migration InitialCreateWithTestData
+ 2. Delete the migration scripts (ex title: 201602162242183_CreateDBWithTestData.cs") from the Migrations folder within the DataAccess project *if they're present*, it's auto generated so don't worry.
+ 
+ 3. Open the "Package Manager Console" within visual studio. (Tools > NuGet Package Manager > Package Manager Console).
+
+ 4. Type or paste: Add-Migration InitialCreateWithTestData
   - press enter - 
 
- 4. Type or paste: Update-Database -Verbose
+ 5. Type or paste: Update-Database -Verbose
   - press enter - 
 
   The same Package Manager Console commands can be run to update the database schema, in the event that you make changes to the code first data model (the objects in the Models folder within the DataAccess project). Be sure to name the migration schema (in the above example the migration schema name is InitialCreateWithTestData) uniquely.
